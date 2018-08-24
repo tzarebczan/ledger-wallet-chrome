@@ -496,6 +496,24 @@ ledger.preferences.zencash =
         address: 'https://explorer.zensystem.io/tx/%s'
     discoveryGap: 20
 
+ledger.preferences.lbry =
+  Display:
+    units:
+      bitcoin:
+        symbol: 'LBC'
+        unit: 8
+
+  # Coin preferences
+  Coin:
+    explorers:
+      official:
+        name: 'explorer.lbry.io'
+        address: 'https://explorer.lbry.io/tx/%s'
+      lbrypool:
+        name:'lbrypool'
+        address: 'https://lbrypool.com/explorer/LBC?txid=%s'
+    discoveryGap: 20
+
 ledger.preferences.dash =
   Display:
     units:

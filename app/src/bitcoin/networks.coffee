@@ -22,6 +22,14 @@ bitcoin.networks.zcash =
   pubKeyHash: 0x1CB8
   scriptHash: 0x1CBD
 
+bitcoin.networks.lbry =
+    magicPrefix: '\x16LBRYcrd Signed Message:\n'
+    bip32:
+      public: 0x019C354F,
+      private: 0x019C3118
+    pubKeyHash: 85
+    scriptHash: 122
+
 bitcoin.networks.zencash =
   magicPrefix: '\x18Zencash Signed Message:\n'
   bip32:
@@ -595,6 +603,27 @@ ledger.bitcoin.Networks =
       P2SH: 0x2096
       XPUB: 0x0488B21E
     bitcoinjs: bitcoin.networks.zencash
+    dust: 10000
+    handleFeePerByte: no
+
+  lbry:
+    name: 'lbry'
+    display_name: 'lbry'
+    plural: 'lbry'
+    scheme: 'lbry:'
+    bolosAppName: 'LBRY'
+    ticker: 'lbc'
+    tickerKey:
+      from: 'fromLBC'
+      to: 'toLBC'
+    bip44_coin_type: '140'
+    handleSegwit: no
+    isSegwitSupported: no
+    version:
+      regular: 85
+      P2SH: 122
+      XPUB: 0x019C354F
+    bitcoinjs: bitcoin.networks.lbry
     dust: 10000
     handleFeePerByte: no
 
